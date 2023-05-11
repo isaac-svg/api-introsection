@@ -6,11 +6,11 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/DB");
 const app = express();
-// https://frontend-intro-section-dropdown.vercel.app/
+//
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: process.env.BASE_URL,
   })
 );
 app.use(cookieParser());
