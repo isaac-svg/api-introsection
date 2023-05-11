@@ -32,7 +32,7 @@ exports.registration = async (req, res) => {
       }
     );
   } catch (error) {
-    res.json({ success: false, message: "user creation failed" });
+    res.json({ success: false, message: error });
   }
 };
 exports.login = async (req, res) => {
