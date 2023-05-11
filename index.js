@@ -17,9 +17,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.json({ extended: true, limit: "30mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
-// app.get("/", (req, res) => {
-//   res.send("Welcome");
-// });
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 app.use("/auth", authRoute);
 
 connectDB();
